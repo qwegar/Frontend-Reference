@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Справочник Front'эндщика</title>
+
+	<link rel="shortcut icon" href="#" type="image/x-icon">
+
+	<link rel="apple-touche-icon" href="#"> <!-- для Retina дисплеев -->
+	<link rel="apple-touche-icon" sizes="72x72" href="#"> <!-- для Retina дисплеев -->
+	<link rel="apple-touche-icon" sizes="114x114" href="#"> <!-- для Retina дисплеев -->
+
+	<link rel="stylesheet" href="">
+
+	<meta name="description" content="Test web page">
+	<meta name="keywords" content="frontend, html, css, javascript">
+	<meta name="author" content="eGa ^(0_0)^">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> <!-- for mobile & no resize -->
+
+	<style>
+		:root {
+			--g-width: 1000px;
+			--g-bg: #616f77;
+			--body-bg: rgb(221, 231, 231);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: var(--body-bg);
+		}
+
+		nav {
+			max-width: 100%;
+			text-align: center;
+			padding: 15px;
+			background: var(--g-bg);
+			margin: 0 auto;
+			color: whitesmoke;
+		}
+
+		main {
+			max-width: var(--g-width);
+			padding: 15px;
+			background: var(--body-bg);
+			margin: 0 auto;
+			color: rgb(110, 110, 110);
+		}
+
+		footer {
+			max-width: 100%;
+			text-align: center;
+			padding: 15px;
+			background: var(--g-bg);
+			margin: 0 auto;
+			color: white;
+		}
+
+		h1 {
+			margin: 30px 0;
+			/* border-top: 1px solid #000;
+			border-bottom: 1px solid #000; */
+			text-align: center;
+			font-size: 2em;
+			color: var(--g-bg);
+		}
+
+		a {
+			color: #fff;
+		}
+
+		details {
+			/* background: var(--g-bg); */
+			padding: 10px 10px 0 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+			cursor: poiter;
+			color: var(--g-bg);
+			border: 1px solid var(--g-bg);
+		}
+
+		/* details:hover {
+			background: var(--g-bg);
+			color: #fff;
+		} */
+
+		summary {
+			outline-style: none;
+			padding-bottom: 10px;
+			cursor: pointer;
+		}
+
+		p {
+			padding: 15px 0;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- [if IE]>
+		<p>Downloads a normal browser, please!</p>
+	<![endIE] -->
+
+	<header>
+		<nav>
+			<span><a href="#">Окружение</a></span> |
+			<span><a href="#">HTML</a></span> |
+			<span><a href="#">CSS</a></span> |
+			<span><a href="#">JS</a></span> |
+			<span><a href="#">Регулярки</a></span> |
+			<span><a href="#">Заметки</a></span>
+		</nav>
+	</header>
+
+
+	<main>
+		<article>
+			<section class="post-head"></section>
+			<section class="post-body"></section>
+			<section class="post-footer"></section>
+		</article>
+
+		<h1>Окружение</h1> <!-- ================================= Окружение ============================= -->
+
+		<!-- ================================= Windows ============================= -->
+		<details>
+			<summary>Windows</summary>
+
+			<p>Чтобы включить режим максимальной производительности, запустите командную строку или консоль Windows PowerShell от имени администратора и выполните следующую команду:<br>
+				powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</p>
+			<p>Чтобы отключить режим максимальной производительности, запустите командную строку или консоль Windows PowerShell от имени администратора и выполните следующую команду:<br>
+				powercfg -restoredefaultschemes</p>
+
+			<p>Список служб для отключения:<br>
+				• Биометрическая служба Windows - Отключаем если на компьютере нет сканера отпечатка пальцев или любого другого биометрического сканера.<br>
+				• Диспетчер проверки подлинности Xbox Live - Отключаем если не пользуемся Xbox Live.<br>
+				• Контейнер службы Microsoft Passport - Отключаем если не пользуемся виртуальными смарт-картами TPM.<br>
+				• Политика удаления смарт-карт - Отключаем если не пользуемся смарт картами.<br>
+				• Сетевая служба Xbox Live - Отключаем если не пользуемся Xbox Live.<br>
+				• Служба перечисления устройств чтения смарт-карт - отключать если вы не пользуетесь смарт картами и если вы не используете интерфейс WinRT.<br>
+				• Служба шифрования дисков BitLocker - Отключать если не используете шифрование Битлокер, отключать тем у кого проблемы с вирусами шифровальшиками.<br>
+				• Смарт-карта - Отключать если не пользуетесь смарт картами.<br>
+				• Сохранение игр на Xbox Live - Отключаем если не пользуемся Xbox Live.</p>
+
+			<p>В Windows 10 по умолчанию присутствует поддержка кодеков H.264 в контейнере MKV, аудио без потерь в формате FLAC, а также видео, закодированного с использованием кодека HEVC/H.265 (который, судя по всему, в ближайшем будущем будет использоваться для большинства 4K видео).</p>
+
+			<p>Горячии клавиши<br>
+				win+q или win+s поиск (или просто начать писать в пуске)<br>
+				win+tab просмотр задач<br>
+				Строка выполнить - Win + R / %temp%<br>
+				Значки рабочего стола - Control.exe desk.cpl,Web,0<br>
+				Просмотр событий Windows - eventvwr.msc</p>
+
+			<p>Замена стрелки ярлыка. В реестре: Компьютер\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons если этого раздела нет, его необходимо создать. Строковый параметр 29, значение D:\Галерея\Иконки\Ярлык 01.ico,0</p>
+
+			<p>Замена системных файлов:<br>
+				1. Отключаем родительский контроль, если это не сделано и делаем резервную копию файла (ов). Затем перезагружаем систему в безопасном режиме.<br>
+				2. Заходим например в C:/Windows/System32 находим там файл shell32.dll, правой кнопкой пункт Свойства / Безопасность / Дополнительно. Далее Владелец / Изменить, выбираем либо имя своей учётки либо админа нажимаем Применить затем ОК и ещё раз ОК. Теперь выбирам Разрешения выбираем ту запись которой мы дали права владельца и нажимаем Изменить разрешения снова выбираем ту запись которой мы дали права владельца и нажимаем Изменить, ставим все галочки и нажимаем ОК затем Применить, появится окно нажимаем Да и вот теперь снова ОК и в остальных окнах ОК.<br>
+				3. после этого файл shell32.dll переименуйте на shell32.old, дальше можете уже забросить в папку C:/Windows/System32 свой файл shell32.dll. Перезагружаемся.</p>
+
+			<p>MBR и GPT жесткие диски. Для того, чтобы установка системы шла на GPT диск, Вам уже не нужно конвертировать диск — если он полностью чистый, он будет размечен под GPT из установщика при неукоснительном соблюдении всех условий:<br>
+				— Устанавливаемая система должна быть х64;<br>
+				— В Boot Menu Bios: UEFI boot должен быть Enabled;<br>
+				— Secure Boot — disabled.<br>
+				— Девайс, с которого будете устанавливать, должен иметь префикс «UEFI» (в случае с приводом — UEFI-Имя_привода)</p>
+
+			<p>Кодировка GPT диска в MBR. Во-первых, запустите командную строку Shift +F10. Затем выполните следующие команды одну за другой:<br>
+				В командной строке (Shift+F10) запускаем: diskpart<br>
+				list disk<br>
+				select disk #<br>
+				clean<br>
+				convert mbr или gpt<br>
+				exit<br>
+				exit</p>
+
+			<p>Запрещенные папки — в Windows запрещено создавать папки с названиями COM, AUX, NUL, PRN и подобные.<br>
+				Мультик — зайдите в пуск >> выполнить и введите telnet towel.blinkenlights.nl и смотрим мультик))</p>
+
+			<p>Для тех кто хочет изменить надпись "Запустить от имени администратора" Пуск - Выполнить - regedit.exe /HKEY_CLASSES_ROOT/exefile/shell/rusas и вместо не установленной записи по умолчанию пишем, что хотим)<br>
+				Редактирование подменю "Отправить" в папке C:\Users\^(0_0)^\AppData\Roaming\Microsoft\Windows\SendTo<br></p>
+
+		</details>
+
+		<!-- ================================= MS Word ============================= -->
+		<details>
+			<summary>MS Word</summary>
+
+			<p>1. Быстро вставить дату можно с помощью комбинации клавиш Shift + Alt + D. Дата вставится в формате ДД.ММ.ГГ. Такую же операцию можно проделать и со временем при помощи комбинации Shift + Alt + T.<br>
+				2. Измените регистр с заглавного на строчный и наоборот - Shift + F3.<br>
+				3. Вставить ударение в слово - установите курсор после буквы, на которой должно стоять ударение, зажмите Alt и наберите комбинацию клавиш 769. Важно: цифры нужно нажимать на цифровой клавиатуре справа.<br>
+				4. Создать новый лист - Ctrl + Enter.<br>
+				5. Сбросить форматирование для текста - Ctrl + Spacebar.</p>
+
+		</details>
+
+		<!-- ================================= VS Code ============================= -->
+		<details>
+
+			<summary>VS Code</summary>
+
+			<p>Настройки программы:<br>
+				• Files: Auto Save - настройка автосохранения<br>
+				• Editor: Word Wrap перенос строк<br>
+				• Editor > Hover: Enable = всплывающие подсказки на тегах<br>
+				• Editor: Insert Spaces = меняет значки пробела на табы</p>
+
+			<p>Сочетание клавиш:<br>
+				• F1 поиск<br>
+				• Alt+Shift+F форматирование кода<br>
+				• Ctrl+F или Ctrl+L формат выбранного куска кода<br>
+				• Ctrl+Shift+L ставит курсор на все совпадения<br>
+				• ctrl+shift+p параметры<br>
+				• ctrl+d выделение однотипных элементов<br>
+				• ctrl+shift+l - выделение разом все однотипных элементов<br>
+				• alt+shift+i - курсор на все выделенные строки</p>
+
+			<p>Планины<br>
+				• Prettier: выравнивает код (поставить галочку Editor: Format on Save чтобы заработал)<br>
+				Если не работает с флажком Format On Save. Входим в параметры и в поиске вбиваем «Default Formatter» и в этом параметре выбираем из списка espenp.prettier-vscode, как форматировщик по умолчанию.<br>
+				• Path Autocomplete: при прописывании пути к файлу выдает доступные варианты файлов<br>
+				• TODO Highlight: подсветка комментов<br>
+				• Code Spell Checker: проверяет орфографию<br>
+				• SFTP: синхронизация редактир. док-та с ftp (Настройка доступа F1 >> SFTP:Config)</p>
+			• http://docs.emmet.io документация к emmet
+
+			<p>Удаление программы<br>
+				В панели управления windows<br>
+				Еще Диск C > Пользователи > Твое имя пользователя и здесь удалить папку .vscode<br>
+				Еще в AppData > Roaming и здесь нужно удалить папку Code.<br>
+			</p><br>
+
+		</details>
+
+		<!-- ================================= Opera ============================= -->
+		<details>
+			<summary>Opera</summary>
+
+			<p>Как отключить обновления?<br>
+				В папке с уст-ой программой (C:\Program Files\Opera или C:\Users\Name\AppData\Local\Programs\Opera) откройте папку с названием версии. Например, 58.0.3135.79. Найдите файл «opera_autoupdate.exe» и измените его имя. Например, на «opera_nodate.exe».<br>
+				Теперь «Windows» + «R», taskschd.msc и нажмите «OK». Откроется планировщик задач. Выберите папку «Библиотека планировщика заданий» и отключите «Opera scheduled Autoupdate» в блоке «Действия»</p>
+
+			<p>Включение настроек для опытных пользователей: находясь на странице opera://settings, набрать ↑ ↑ ↓ ↓ ← → ← → b a Enter</p>
+
+			<p>Плагины:<br>
+				• Плагин для выделения текста на ссылках: Select like a Boss<br>
+				• Adblock Plus - бесплатный блокировщик рекламы<br>
+				• SaveFrom.net помощник<br>
+				• Select like a Boss<br>
+				• Speed Dial for Gmail<br>
+				<br>
+				Dark Mode https://addons.opera.com/ru/extensions/details/dark-mode/<br>
+				Install Chrome Extentions https://addons.opera.com/ru/extensions/details/install-chrome-extensions/<br>
+				Gmail Notifier https://addons.opera.com/ru/extensions/details/gmail-notifier/<br>
+				Adguard https://addons.opera.com/ru/extensions/details/adguard/ блокировка рекламы</p>
+		</details>
+
+		<!-- ================================= Notepad++ ============================= -->
+		<details>
+			<summary>Notepad++</summary>
+
+			<p>Шрифт по дефолту в NotePad++ Courier New</p>
+		</details>
+
+		<!-- ================================= Emmet ============================= -->
+		<details>
+			<summary>Emmet</summary>
+
+			<p>HTML</p>
+			<p>html:5 или !<br>
+				> = вложенный тег | + = сосебний тег | ^ = на уровень выше по вложенности<br>
+				[] = любые атрибуты | {} = текст внутри тега<br>
+				p>#out<br>
+				article>(section>h2+p)+section>h2+p<br>
+				article>section>h2+p^section>h2+p<br>
+				header>(nav.ul>.item*5>a>{item-$})+(form>input:s+btn{search})^main>article*3>h2.title{title-$}+p>{lorem10}</p>
+
+			<p>ul>li.el$*5<br>
+				ul>li*3>a{item$}<br>
+				p[tile=text]<br>
+				a{click} a:link a:mail<br>
+				link link:css link:favicon<br>
+				meta:utf meta:vp<br>
+				form:get form:post<br>
+				inp input:h input:email input:url input:p input:datetime input:date input:s input:c input:r input:reset<br>
+				select:d<br>
+				opt<br>
+				textarea<br>
+				btn:s btn:r btn:d<br>
+				bq hdr ftr adr</p>
+
+			<p>CSS</p>
+			<p>pos pos:r pos:s pos:a pos:f<br>
+				z fl:n fl:r fl:l<br>
+				cl cl:n cl:r cl:l<br>
+				d:n rsz rsz:n rsz:b rsz:h rsz:v<br>
+				cur:ha cur:he cur:p cur:t<br>
+				bxsh maw miw mah mih<br>
+				fwn fwb ff<br>
+				tar taj tal ta:l tac<br>
+				tdn tdu tdo tdl | ttn ttc ttu ttl | txh<br>
+				lh lts<br>
+				bg bgn bgc bgi<br>
+				c c:r c#f<br>
+				bd bd:n bdrs<br>
+				@f @i @m</p>
+		</details>
+
+		<!-- ================================= Поисковые запросы ============================= -->
+		<details>
+			<summary>Поисковые запросы</summary>
+
+			<p>inurl:<br>
+				inurl:ssd.ru колодец<br>
+				inurl:ssd.ru filetype:pdf</p>
+			</p>
+		</details>
+
+
+		<h1>HTML</h1> <!-- ================================= HTML ============================= -->
+
+		<!-- ================================= Основная информация ============================= -->
+		<details>
+			<summary>Основная информация</summary>
+
+			<p>NoBreakSPace<br>
+				MonoSpace</p>
+
+			<p>Общие аттребуты<br>
+				title - название тега при наведении<br>
+				contenteditable - редактирование<br>
+				spellcheck - проверка правописания<br>
+				hidden - визуально скрывает<br>
+				tabindex - переход табом<br>
+				dir - меняет направление текста<br>
+				lang - особенности при разных языках</p>
+
+			<p>table<br>
+				caption - заголовок<br>
+				<br>
+				thead - шапка таблицы<br>
+				tbody - основная ин-ия<br>
+				tfoot - подвал таблицы (итоги)</p>
+
+			<p>header - шапка документа либо секции<br>
+				nav - основная навигация<br>
+				aside - вспомогательный контент<br>
+				section - семантически обособленная секция<br>
+				main - главный контент страницы<br>
+				footer - подвал документа либо секции<br>
+				<br>
+				article - статья или новость<br>
+				<br>
+				figure - автономный контент (картинка итп)<br>
+				figcaption - подпись для figure<br>
+				<br>
+				details - дополнительные сведения<br>
+				summary - видимая подпись к details<br>
+				<br>
+				mark - выделенный текст<br>
+				time - время / дата</p>
+
+			<p><a href="link" download>Download File</a><br>
+				<a href="tel:+123-45-67">+123-45-67</a><br>
+				<a href="mailto:a@mail.ru">a@mail.ru</a><br>
+				<a href="skype:test">Skype Call</a></p>
+
+			<p>
+				<meter value="0" max="100" low="10" high="60">Course Progress</meter> = &lt;meter value="0" max="100" low="10" high="60"&gt;Course Progress&lt;/meter&gt;<br>
+				<meter value="20" max="100" low="10" high="60" optimum="80">Course Progress</meter> = &lt;meter value="20" max="100" low="10" high="60" optimum="80"&gt;Course Progress&lt;/meter&gt;<br>
+				<meter value="60" max="100" low="10" high="60">Course Progress</meter> = &lt;meter value="60" max="100" low="10" high="60"&gt;Course Progress&lt;/meter&gt;<br>
+				<meter value="100" max="100" low="10" high="60">Course Progress</meter> = &lt;meter value="100" max="100" low="10" high="60"&gt;Course Progress&lt;/meter&gt;<br>
+				<br>
+				<progress value="30" max="100"></progress> = &lt;progress value="30" max="100"&gt; &lt;/progress&gt;<br>
+				Еще есть парный тэг <mark>&lt;mark&gt;</mark> для выделения<br>
+			</p>
+
+			<p>
+				<button>type="<b>button</b>" - обычная кнопка</button> | <button>type="<b>submit</b>" - для отправки формы</button> | <button>type="<b>reset</b>" - для очистки формы</button><br>
+				Тег <abbr title="расшифровка для абревиатуры">abbr</abbr> = расшифровка для абревиатуры<br>
+				&lt;noscript&gt;У вас откл. JS&lt;/noscript&gt;</p>
+
+			<p>
+			<fieldset>
+				<legend>Название фомы</legend>
+				<label for="name">Name: </label><input id="name">
+				<label for="pass">Password: <input id="pass"></label>
+				Теги fieldset и legend
+			</fieldset>
+
+			<br>
+
+			◆ Select ➟ Option: <select>
+				<option>HTML</option>
+				<option>CSS</option>
+				<option>JS</option>
+			</select> |
+			◆ Select ➟ Optgroup ➟ Option: <select>
+				<optgroup label="lang">
+					<option>HTML</option>
+					<option>CSS</option>
+					<option>JS</option>
+				</optgroup>
+				<optgroup label="Tech">
+					<option>PHP</option>
+					<option>Ruby</option>
+					<option>Pyton</option>
+				</optgroup>
+			</select> |
+			◆ Input ➟ DataList: <input type="text" list="red">
+			<datalist id="red">
+				<option value="HTML 5"></option>
+				<option value="CSS 3"></option>
+				<option value="JS 9"></option>
+			</datalist></p>
+
+			<p>
+			<form action="file.php" autocomplete="on" <!--автозаполнение формы--> novalidate
+				<!--отключение валидации--> ><br>
+
+				<select multiple>
+					<option>HTML</option>
+					<option>CSS</option>
+					<option>JS</option>
+					<option>PHP</option>
+					<option>Ruby</option>
+					<option>Pyton</option>
+				</select>
+				<br>
+				<h1 lang="en"><q>Hello</q></h1>
+				<h1 lang="gr"><q>Hello</q></h1>
+
+				<br>
+				</p>
+
+				<p>
+					Список определений
+
+					dl - Diffinition List
+					dt
+					dd
+
+				<dl>
+					<dt>Заголовок</dt>
+					<dd>Определение</dd>
+				</dl>
+
+
+				<picture>
+					<source media="(min-width: 1024px)" srcset="pic600/600">
+					<source media="(min-width: 768px)" srcset="pic300/300">
+					<source media="(min-width: 360px)" srcset="pic100/100">
+					<img src="pic300/300" alt="">
+				</picture>
+
+				<figure>
+					<!--контейнер для картинки и описания-->
+					<img src="pic300/300" alt="">
+					<figcaption>description image<figcaption>
+				</figure>
+				</p>
+
+
+				<blockquote>
+					<p>Тег blockquote предназначен для больших цитат</p>
+				</blockquote>
+
+				<p><tt>Машинописный текст</tt><br>
+					<s>Перечеркнутый текст</s><br>
+					<i>Просто курсив</i> и <em>с семантическим выделением</em><br>
+					Тэг code для отображения куска кода<br>
+					Тег pre для отображения текста в сохранением форматирования<br>
+					T'ub sub и sup для написания текста в различном регистре</p><br>
+		</details>
+
+		<!-- ================================= Что то еще ============================= -->
+		<details>
+			<summary>Основная информация</summary>
+
+			<p></p><br>
+		</details>
+
+
+		<h1>CSS</h1> <!-- ================================= CSS ============================= -->
+
+		<!-- <details>
+				<summary>Title</summary>
+
+				<p>Text</p><br>
+			</details> -->
+
+		<!-- ================================= Position ============================= -->
+		<details>
+			<summary>Position</summary>
+
+			<p>Absolute | Relative | Fixed | Sticky</p><br>
+		</details>
+
+		<!-- ================================= Media Запросы ============================= -->
+		<details>
+			<summary>Media Запросы</summary>
+
+			<p>@media - проверяя ширину окна браузера перед тем, как применить стили<br>
+				@supports - позволяющий проверить браузерную поддержку какого-то свойства или комбинации свойства и значения перед тем, как применять определённый блок стилей</p><br>
+		</details>
+
+		<!-- ================================= БЭМ ============================= -->
+		<details>
+			<summary>БЭМ</summary>
+
+			<p>
+				Блок — это функционально независимый компонент страницы, который может быть использован повторно<br>
+				Элемент — составная часть блока, которая не может использоваться в отрыве от него<br>
+				Модификатор — сущность, определяющая внешний вид, состояние или поведение блока / злемента<br>
+			</p><br>
+		</details>
+
+		<!-- ================================= Grid ============================= -->
+		<details>
+			<summary>Grid</summary>
+
+			<p>display: grid; // начало работы с grid<br>
+				grid-template-columns: 200px 1fr 300px; // кол-во и размер колонок<br>
+				grid-template-columns: min-content 200px max-content minmax(10px 90px);<br>
+				grid-template-columns: repeat (3, 1fr); // 3 штуки по одной фракции<br>
+				grid-template-columns: repeat (3, [name] 1fr); // добавление имени линии<br>
+				grid-template-columns: repeat (auto-fill / auto-fit); // растягивают дочерние эл-ты<br>
+				<br>
+				grid-template-columns: minmax(150px, 200px) 1fr minmax(150px, 200px);<br>
+				grid-template-areas: "header header header" "nav main aside" "footer footer footer";<br>
+				<br>
+				grid-column-gap: 15px; // растояние между колонками (сокращенная запись: grid-gap)<br>
+				grid-column-start: 1; // (-1) начальное положение в сетке<br>
+				grid-column-end: 3; // ( -3) конечное положение в сетке<br>
+				grid-column: 3/4; // упрощенная форма записи<br>
+				grid-column: col 1 / span 7; // назначение местоположения по имени<br>
+				<br>
+				grid-template-rows: repeat (3, 1fr); // кол-во и размер рядов<br>
+				grid-row-start: 3;<br>
+				grid-row-end: 4;<br>
+				grid-row: 2/3;<br>
+				<br>
+				grid-area: 1/2/3/4; // еще более простая запись (состоит из row-start / column-start / row-end / column-end)<br>
+				<br>
+				justify-items: stretch; // выравнивание по горизонтали (другие св-ва: start | end | center) !прим. к контейнеру<br>
+				align-items: stretch; // выравнивание по вертикали (другие св-ва: start | end | center) !прим. к контейнеру<br>
+				<br>
+				justify-self: stretch; // выравнивание по горизонтали (другие св-ва: start | end | center) !прим. к эл-ту<br>
+				align-self: stretch; // выравнивание по вертикали (другие св-ва: start | end | center) !прим. к эл-ту<br>
+				<br>
+				justify-content: stretch; // вырав. эл-ты в контейнере по гориз-ли (другие св-ва: start | end | center | space-around | space-between | space-evenly)<br>
+				align-content: stretch; // вырав. эл-ты в контейнере по вертикали (другие св-ва: start | end | center | space-around | space-between | space-evenly)<br>
+				<br>
+				grid-auto-flow: row; // выравнивание эл-тов в контейнере (column | доп: dense)<br>
+				order: -1; // меняет место расположения эл-та<br><br>
+		</details>
+
+		<h1>JS</h1> <!-- ================================= JS ============================= -->
+
+		<!-- <details>
+				<summary>Title</summary>
+
+				<p>Text</p><br>
+			</details> -->
+
+		<!-- ================================= Основы ============================= -->
+		<details>
+			<summary>Основы</summary>
+
+			<p>&& (И), || (ИЛИ) и ! (НЕ)</p>
+			<p>атребут defer="" в тэге script</p>
+			<p>Типы данных: Bulian | String | Number | undefined | null | Object | Simbol</p>
+			<p>Тернарный оператор обычно записывается вот так var elvisLives = Math.PI > 4 ? "Да" : "Нет";</p>
+			<p>Простые: Числа | Строки | Булиан (Логические) | Null | Undefined | Simbol | BitInt (Все что больше 2<sup>52</sup>)<br>
+				Объекты: Массивы | Функции | Объект даты | Регулярки | Ошибки</p>
+			<p>\ - экран-ие | \n - перенос | \t - табуляция | ${} - интерполяция (строковой шаблон)</p>
+			<p>Узнать подробнее про: spread, rest, desctucturing (деструктуризация)</p><br>
+			<p>
+				Сравнение примитивов:<br>
+				console.log(false == '') // true<br>
+				console.log(false == []) // true<br><br>
+				console.log(false == {}) // false<br>
+				console.log('' == 0) // true<br>
+				console.log('' == []) // true<br>
+				console.log('' == {}) // false<br>
+				console.log(0 == []) // true<br>
+				console.log(0 == {}) // false<br>
+				console.log(0 == null) // false<br>
+			</p><br>
+		</details>
+
+		<!-- ================================= Сообщения ============================= -->
+		<details>
+			<summary>Сообщения</summary>
+
+			<p>в браузере: alert(); | confirm(); | prompt('...', ''); | document.write();<br>
+				в консоле:console.log('LOG'); | console.error('ERROR'); | console.warn('WARNING'); | console.info('INFO'); | console.group(); console.groupEnd();</p><br>
+		</details>
+
+		<!-- ================================= Сообщения ============================= -->
+		<details>
+			<summary>Консоль</summary>
+
+			<p>
+				console.log(a)
+				console.warn(a)
+				console.error(a)
+				console.trace() просмотр пути вызова функций
+				console.table(obj) таблица для объектов
+				console.group(name) .groupEnd() группировка вызовов
+				console.dir(NodeElement) свойства элемента (можно обращаться сразу по id)
+			</p><br>
+		</details>
+
+		<!-- ================================= Math() ============================= -->
+		<details>
+			<summary>Math()</summary>
+
+			<p>Math.E // экспонента <br>
+				Math.PI // число пи<br>
+				Math.sqrt(25) // квадратный корень из 25<br>
+				Math.pow(5,2) // возведение 5 во 2-ю степень (5 ** 2 = тоже самое)<br>
+				Math.abs(-42) // модуль числа<br>
+				Math.max(2,4,7,43,2,76) // находит максимальное число<br>
+				Math.min(2,4,7,43,2,76) // находит минимальное число<br>
+				Math.floor(4.9) // округляет в меньшую сторону<br>
+				Math.ceil(4.1) // округляет в большую сторону<br>
+				Math.round(4.1) // округляет к ближайшему целому<br>
+				Math.trunc(4.1) // удаляет все дробные знаки<br>
+				Math.randon() // случайное число от 0 до 1</p>
+
+			<p>function randomNumber(min,max) { return Math.floor(Math.random() * (max - min + 1) + min) }</p><br>
+		</details>
+
+		<!-- ================================= Методы строк ============================= -->
+		<details>
+			<summary>Методы строк</summary>
+
+			<p>str.toUpperCase() // приводит к верхнему регистру<br>
+				str.toLowerCase() // приводит к нижнему регистру<br>
+				str.trim() // удаляет пробелы<br>
+				str.trimLeft() // удаляет пробелы слева<br>
+				str.trimRight() // удаляет пробелы справа<br>
+				str.match(regexp) выполняет поиск по строке с использованием регулярного выражения и возвращает массив, содержащий результаты поиска
+				str.concat() // объединяет две или более строки
+				str.split() // разбивает строку в массив
+				// Получаем каждый символ: "Hello Tproger".split(""); >>> ["H", "e", "l", "l", "o", " ", "T", "p", "r", "o", "g", "e", "r"]
+				// Получаем каждое слово из строки: "Hello Tproger".split(" "); >>> ["Hello", "Tproger"]
+				// Устанавливаем ограничитель: "Hello Tproger".split(" ", 1); >>> ["Hello"]
+				str.repeat() // повторяет строку указанное количество раз
+				str.charAt() // возвращает символ по указанному индексу
+				str.includes()
+				str.indexOf() // возвращает индекс первого найденного вхождения указанного значения
+				str.lastIndexOf() // возвращает индекс последнего найденного вхождения указанного значения
+			</p><br>
+		</details>
+
+		<!-- ================================= DOM ============================= -->
+		<details>
+			<summary>DOM</summary>
+
+			<p>.style.border = '1px solid red';<br>
+				elem.classList.add();<br>
+				elem.classList.remove();<br>
+				elem.classList.toggle();<br>
+				<br>
+				elem.getAttrebute('name-attribute', 'value'); // чтение класса<br>
+				elem.setAttrebute('name-attribute'); // создание класса<br>
+				<br>
+				document.createElement('tag-name'); // создание элемента<br>
+				elem.appendChild('elem-name'); // добавление на страницу
+				<br>
+				item.parrentNode.removeChild(item)<br>
+				this.style.color = this.dateset.color // (dataset ссылается на датаатребуты)<br>
+				<br>
+				classList: add - добавить | remote - удалить | contains - проверить наличие | toggle - переключить</p>
+
+			<p>offsetTop<br>
+				pageYOffset - размер страницы по высоте<br>
+				<br>
+				document.querySelector(link.hash) - бращение в хешу страницы<br>
+				<br>
+				el.nextElementSibling = переход с след узлу ДОМ<br>
+				или el.parentNode.querySelector('el2')<br>
+				<br>
+				document.documentElement<br>
+				let scrollTimeout<br>
+			</p><br>
+		</details>
+
+		<!-- ================================= События DOM ============================= -->
+		<details>
+			<summary>DOM</summary>
+
+			<p>
+				.style.border = '1px solid red';<br>
+			</p>
+
+			<p>
+				drag & drop события<br>
+				dragstart // снабатывает вначале перетаскивания<br>
+				dragend // снабатывает вконце перетаскивания<br>
+				dragover // срабатывает все время<br>
+				dragenter // срабатывает когда наводят эл-нт над объектом 1 раз<br>
+				dragleave // срабатывает когда сводят эл-нт за границы объекта 1 раз<br>
+				drop // срабатывает над объектом после отпускания<br>
+			</p><br>
+		</details>
+
+		<!-- ================================= Inputs ============================= -->
+		<details>
+			<summary>Inputs</summary>
+
+			Посмотреть в HTML autofocus, required, pattern
+			<p>input.onfocus
+				input.onblur</p><br>
+		</details>
+
+		<!-- ================================= Массивы ============================= -->
+		<details>
+			<summary>Array</summary>
+
+			<p>arr.push(); // добавляет в конец<br>
+				arr.pop(); // удаляет в конце<br>
+				arr.delete[2]; // удаляет указанный элемент<br>
+				arr.splice(2, 3, 'Hi'); // удаляет указанные элементы (с какаго, сколько, добавляет)<br>
+				arr.shift(); // добавляет в начало<br>
+				arr.unshift(); // удаляет в начале<br>
+				arr.reverse(); // переворачивает массив задом-наперед<br>
+				let bb = arr.map((item) => item * 5); // служит для перебора массива<br>
+				let cc = arr.filter((item, index) => { return item % 2 == 0 && item != 0; }) // работает с условиями для массива<br>
+				let mrr = arr.filter(function (item) { return item > 0 })<br>
+				arr.filter(Boolean) сравнение эл-от массива на истину
+				a.split('разделитель'); // разбивает эл-ты строки на массив<br>
+				arr.every() // каждый эл-нт массива<br>
+				arr.some() // хотя бы один эл-нт массива<br>
+				arr.join() // склеивает массив в строку<br>
+				arr.join('разделитель'); // соед. эл-ты массива в строку<br>
+				arr.forEach( (item, i, array){}, context ) // перебор массива<br>
+				arr.forEach(function (elem, index) { console.log(index); }); // операция с эл-ом массива
+			</p>
+			<p>
+				let arr = [1,2,3,4,5]<br>
+				let sss = arr.reduce((total,item) => {<br>
+					console.log('total ' + total)<br>
+					console.log('item ' + item)<br>
+					return total + item<br>
+				},0)<br>
+				arr.reduce((total,item) => {}) // как reduce только задом-наперед<br>
+				let sum = nums.reduce((x, y) => x + y) сумма всех эл-ов массива
+			</p><br>
+		</details>
+
+		<!-- ================================= Объекты ============================= -->
+		<details>
+			<summary>Объекты</summary>
+
+			<p>почитать про деструкторизацию</p>
+			<p>let a = new Object();<br>
+				a.add(); // добавление элемента<br>
+				a.clear(); // очищает все эл-ты<br>
+				a.delete(); // удаляет эл-нт<br>
+				a.has(); // проверяет наличие эл-та<br>
+				<br>
+				a.size // длина (кол-во эл-ов)<br>
+				for (let i of a) { console.log(i); } // перебор эл-ов<br>
+				<br>
+				Получение массива с уникальными значениями:<br>
+				let rArr = [3,6,7,2,4,2,3,7,4,5,6,3,4,3,5,2,9,1]<br>
+				let set = new Set(rArr)<br>
+				let arr = Array.from(set)</p>
+
+			<p>let obj = {<br>
+				name: 'Alex',<br>
+				lang: 'JS',<br>
+				cash: 3500<br>
+				}</p>
+
+			<p>for (let key in obj) {<br>
+				if (obj.hasOwnProperty(key)) {<br>
+				console.log(obj[key])<br>
+				}<br>
+				}</p>
+
+			<p>Object.keys(obj).forEach((item) => {<br>
+				console.log(item + ': ' + obj[item])<br>
+				})</p>
+
+			<p>let arr = [1,1,2,3,5,8,13,21]<br>
+				<br>
+				let obj = [<br>
+				{ name: 'Alex',cash: 3500 },<br>
+				{ name: 'Joe',cash: 2800 },<br>
+				{ name: 'Pit',cash: 800 },<br>
+				]<br>
+				<br>
+				let allCash = obj<br>
+				.filter(item => item.cash > 2000)<br>
+				.reduce((acum,obj) => {<br>
+				acum += obj.cash<br>
+				return acum<br>
+				},0)<br>
+				<br>
+				console.log(obj)<br>
+				console.log(allCash)</p><br>
+		</details>
+
+		<!-- ================================= Функции ============================= -->
+		<details>
+			<summary>Функции</summary>
+
+			<p>2.40 - новый синтаксис функций
+
+				function declaration >> function f1() { }
+				function expression >> let f2 = function () { }
+
+				function sum(a = 10,b = a + 5) { console.log(a + b) } // значения по умолчанию
+
+				function sumAll(...all) {
+				let res = 0
+				for (let num of all) {
+				res += num
+				}
+				return res
+				}
+				let summa = sumAll(1,2,3,4,5,6,7)
+				console.log(summa)</p>
+
+			<p>/********** Замыкания **********/
+				/* function name(name) {
+				return function (lName) {
+				console.log(name + ' ' + lName)
+				}
+				}
+				let temp = name('Alex')
+				console.log(temp('Grom'))
+				console.log(temp('Velikiy')) */</p><br>
+		</details>
+
+		<!-- ================================= Navigator ============================= -->
+		<details>
+			<summary>Navigator</summary>
+
+			<p>console.log(screen.width + ' и ' + screen.height) // разрешение экрана пользователя<br>
+				console.log(screen.availWidth + ' и ' + screen.availHeight) // макс область на которую можно открыть браузер<br>
+				console.log(screen.colorDepth) // глубина цвета монитора (кол-во бит на пиксель)<br>
+				<br>
+				console.log(navigator) // инф-я о браузере<br>
+				console.log(history) // история (методы и forward() помогают листать страницы)<br>
+				// history.back() предыдущая страница в истории<br>
+				// history.forward() следующая страница в истории<br>
+				// history.go(-2) перейти на 2 страницы назад<br>
+				<br>
+				console.log(navigator.userAgent) // инф-я о браузере</p><br>
+		</details>
+
+		<!-- ================================= Готовые решения ============================= -->
+		<details>
+			<summary>Готовые решения</summary>
+
+			<p>
+			<pre class="javascript" style="font-family:monospace;">Склонение числительных в javascript
+					<span style="color: #000066; font-weight: bold;">function</span> declOfNum<span style="color: #009900;">&#40;</span>number<span style="color: #339933;">,</span> titles<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+							cases <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>  
+							<span style="color: #000066; font-weight: bold;">return</span> titles<span style="color: #009900;">&#91;</span> <span style="color: #009900;">&#40;</span>number<span style="color: #339933;">%</span>100<span style="color: #339933;">&gt;</span><span style="color: #CC0000;">4</span> <span style="color: #339933;">&amp;&amp;</span> number<span style="color: #339933;">%</span>100<span style="color: #339933;">&lt;</span><span style="color: #CC0000;">20</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span> <span style="color: #CC0000;">2</span> <span style="color: #339933;">:</span> cases<span style="color: #009900;">&#91;</span><span style="color: #009900;">&#40;</span>number<span style="color: #339933;">%</span>10<span style="color: #339933;">&lt;</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span>number<span style="color: #339933;">%</span>10<span style="color: #339933;">:</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#93;</span> <span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>  
+					<span style="color: #009900;">&#125;</span>
+					use<span style="color: #339933;">:</span>
+					declOfNum<span style="color: #009900;">&#40;</span>count<span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #3366CC;">'найдена'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'найдено'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'найдены'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+			</pre>
+			</p><br>
+		</details>
+
+		<h1>Консоль</h1> <!-- ================================= Консоль ============================= -->
+
+		<!-- ================================= Командная строка ============================= -->
+		<details>
+			<summary>Командная строка</summary>
+
+			<p>dir список папок<br>
+				. текущая папка<br>
+				.. уровень выше<br>
+				cd.. выход выше</p><br>
+		</details>
+
+		<!-- ================================= Node.JS ============================= -->
+		<details>
+			<summary>Node.JS</summary>
+
+			<p>node запуск ноды<br>
+				ctrl+c x2 выход из ноды<br>
+				c: // (d:, e:) выбор диска<br>
+				dir // просмотр папок в выбранной директории<br>
+				cd 'имя папки' // (chench directory) вход в папку (tab: автозаполнение)<br>
+				cd .. // выход на каталог вверх<br>
+				cls // очистка консоли<br>
+				npm install (i) // (npm i -g create-react-app) установка компонентов<br>
+				npx // (node package exequte) запуск (выполнить) компонента<br>
+				<br>
+				npm init // инициализация проекта<br>
+				npm start (Starts the development server.)<br>
+				npm run build (Bundles the app into static files for production.)<br>
+				npm test (Starts the test runner.)<br>
+				npm run eject (Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!)<br>
+				<br>
+				https://www.npmjs.com NPM System</p><br>
+		</details>
+
+		<!-- ================================= Git ============================= -->
+		<details>
+			<summary>Git</summary>
+
+			<p>Установим с сайта: https://git-scm.com</p>
+			<p><br>git просмотр команд<br>
+				git --version - просмотр версии<br>
+				git config</p>
+
+			<p><br><b>Навигация</b><br>
+				pwd — Показать текущий каталог<br>
+				ls - Показать файлы в данной папке, кроме скрытых<br>
+				ls -f — Показать файлы в данной папке, включая и скрытые<br>
+				cd c:/ — Перейти в конкретный каталог<br>
+				cd - — Вернуться назад<br>
+				cd .. — Выйти на 1 уровень вверх<br>
+				cd ../.. — Выйти на 2 уровня вверх
+			</p>
+
+			<p><br><b>Создание каталогов</b><br>
+				mkdir — Создать папку<br>
+				cd !$ — Перейти в только что созданную папку<br>
+				mkdir -p {app1,app2} — Создать сразу несколько папок<br>
+				mkdir -p app/{css,js} — Создать сразу несколько вложенных папок<br>
+				Создание файлов<br>
+				touch index.html — Создать файл index.html<br>
+				touch app/{css/main.css,js/main.js,index.html} — Создать сразу несколько файлов, никаких лишних пробелов быть не должно
+			</p>
+
+
+			<p><br><b>Общие</b><br>
+				=================================================<br>
+				git init = инициализация проекта<br>
+				git status = просмотр статуса файлов<br>
+				<br>
+				git add = начинает отслеживать изменения в файле (* или . добавляют все файлы)<br>
+				git rm --cached index.html = перестает отслеживать изменения в файле<br>
+				<br>
+				git branch = просмотр веток<br>
+				git branch name = создание новой ветки<br>
+				git branch -D name = удаление ветки<br>
+				git checkout name = переключится на нужную ветку<br>
+				git checkout -b name = создание новой ветки и сразу переключится на нее<br>
+				git merge name = объеденить ветку name с той, в которой находишься<br>
+				<br>
+				Новый репозиторий с помощью командной строки:<br>
+				echo "# Lavrik-Less" >> README.md<br>
+				git init<br>
+				git add README.md<br>
+				git commit -m "first commit"<br>
+				git branch -M main = переименовывает ветку master в main *не обязательно<br>
+				git remote add origin https://github.com/qwegar/Lavrik-Less.git<br>
+				git push -u origin main (-u = upstream)<br>
+				<br>
+				…or push an existing repository from the command line<br>
+				git remote add origin https://github.com/qwegar/Lavrik-Less .git<br>
+				git branch -M main<br>
+				git push -u origin main<br>
+				======================================================<br>
+			</p>
+
+
+
+			<p><br><b>Удаление файлов</b><br>
+				touch — позволяет создавать файлы<br>
+				rm test — Удалить пустую папку test<br>
+				rm -r test — Удалить папку test с файлами внутри неё
+			</p>
+
+			<p><br><b>Перемещение файлов</b><br>
+				mv app1/*.* app2 — Переместить все файлы из папки app1 в папку app2<br>
+				git init - инициализация проекта<br>
+				git add *.html - добавление всех html файлов в проект<br>
+				git add . - добавление всех файлов в проект<br>
+				git commit - или<br>
+				git commit -m 'название' - закоммитить изменения<br>
+				git config --global user.name "Your Name" - добавить имя<br>
+				git config --global user.email "you@example.com" - добавить почту<br>
+				git config --list - можно проверить почту<br>
+				git clone http://адрес - адрес скачиваемого репозитория<br>
+				git status - статус изменений<br>
+				git add file.name // добавить в очередь на добавление (-A = все файлы)<br>
+				git diff - просмотр изменений файла<br>
+				git log - просмотр изменений<br>
+				git log -5 - последние 5 коммитов<br>
+				git log --oneline --decorate<br>
+				git tag - просмотр тегов<br>
+				git tag -a тег - создание тега
+			</p>
+
+			<p>git remote add origin https://github.com/qwegar/Git-Test1.git - ссылка на GitHub<br>
+				git push -u origin master<br>
+				git push - залить измененные файлы на git<br>
+				git clone https://github.com/qwegar/Git-Test1.git - скачать с git'a<br>
+				git pull - добавляет все изменения в проект ( начало дня :) )
+			</p>
+
+			<p>git checkout -- index.html - отмена изменений<br>
+				git checkout . - отмена изменений во всех файлах<br>
+				git reset index.html - отмена изменений после применения команды add (вытащить из стейджа)<br>
+				git reset --hard HEAD^1 - отмена изменений после коммита (на ^1 коммит назад)<br>
+				git reset --soft HEAD^1 - то же самое, но изменения не удаляются
+			</p>
+
+			<p><br><b>Ветки</b><br>
+				git branch - просмотр веток<br>
+				git branch -v - просмотр ветки и последнего коммита<br>
+				git branch имяВетки - создание ветки<br>
+				git checkout имяВетки - переключение на нужную ветку<br>
+				git checkout -b имяВетки - создать и сразу перейти в ветку<br>
+				git checkout кодКоммита - переход к определенному коммиту<br>
+				git branch -m имяВетки - переименовать текущую ветку<br>
+				git branch -d имяВетки - удаление ветки
+			</p>
+
+			<p><br><b>Алиасы (C:\Users\папка_вашего_пользователя\.gitconfig):</b><br>
+				s = status --short<br>
+				st = status<br>
+				l = log --oneline --graph --decorate --all<br>
+				g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'<br>
+				br = branch<br>
+				co = checkout
+			</p>
+
+			<p><br><b>Остальные команды:</b><br>
+				restore - Восстановить файлы рабочего дерева<br>
+				sparse-checkout - Инициализировать и изменить sparse-checkout изучить историю и состояние (см. также: git help revisions)<br>
+				bisect - Используйте двоичный поиск, чтобы найти фиксацию, которая привела к ошибке<br>
+				grep - Печатать строки, соответствующие шаблону<br>
+				merge - Объединение двух или более историй разработки вместе<br>
+				rebase - Reapply фиксируется поверх другой базовой подсказки<br>
+				switch - Переключить ветви<br>
+				fetch - Загрузить объекты и ссылки из другого репозитория
+			</p>
+
+			<p><br>Расширение Gist от Ken Howard<br>
+				https://pages.github.com/<br>
+				Чуть подробнее https://githowto.com/ru/aliases
+			</p>
+
+			<p>npm i gulp --save-dev = Установите пакет gulp в ваши зависимости devDependencies</p>
+
+			<p>Это общие команды Git, используемые в различных ситуациях: начать рабочую область (см. также: руководство по git help)</p>
+
+			<p>'git help -a' и 'git help -g' перечисляют доступные подкоманды и некоторые концептуальные руководства. См. 'Git help <command>' или 'git help <concept>' прочитать о конкретной подкоманде или концепции. См. «Git help git» для обзора системы.</p>
+		</details>
+
+		<!-- ================================= Регулярки ============================= -->
+		<details>
+			<summary>Регулярки</summary>
+
+			<p>Способы создания:<br>
+				let regexp = new RegExp('shablon', 'flags')<br>
+				let regexp = /shablon/flags</p>
+			<p>str.match(regexp); - метод String для поиска совпадений<br>
+				Array.from(str.matchAll(regexp)); - массивы с развернут. инфой (не для всех бро)</p>
+			<p>\ - экранирование<br>
+				\n - перенос строки<br>
+				. - любой символ кроме \n<br>
+				\. - только точка<br>
+				\d - любое число от 0 до 9<br>
+				\D - любое не число<br>
+				\s - пробел (и /t (табуляция), \n, \v (вертикал табуляция), \f (конец файла), \r (возврат коретки)<br>
+				\S - не пробел...<br>
+				\w - слово [a-zA-Z_]<br>
+				\W - не слово<br>
+				[ЮИ]ра - набор (Юра или Ира)<br>
+				[^ЮИ]ра - исключ-й набор (все кроме Ю и И)<br>
+				[о-т] - диапазон (от О до Т)<br>
+				[^о-т] - исключ-й диапазон (все кроме от О до Т)<br>
+				[а-вг-к] - несколько диапазонов (ё выходит из диапозона)</p>
+
+			<p>Квантифткаторы<br>
+				\d{3} - 3 цифры подряд<br>
+				\d{3,4} - найдет 3 или 4 цифры подряд (большее в приоритете)<br>
+				\d{3,4}? - найдет 3 или 4 цифры подряд (большее в приоритете)<br>
+				\d{3,} - найдет 3 и более цифр подряд (большее в приоритете, до ∞)<br>
+				\d{3,}? - найдет 3 и более цифр, но самая маленькая из них<br>
+				colou?r - u может быть или может не быть (найдет оба варианта)<br>
+				\d* - от 1 до ∞ цифр подряд (макс. кол-во в приоритете)<br>
+				\d*? - не найдет цифр ("ему лень")<br>
+				\d+ - от 1 до ∞ цифр подряд (макс. кол-во в приоритете)<br>
+				\d+ - от 1 до ∞ цифр подряд (мин. кол-во в приоритете)</p>
+
+			<p>Флаги<br>
+				/./g - гробальный поиск, ищет все совпадения (в 'a\nб' найдет и А и Б)<br>
+				/./gs - 's' делает . любым символом (в 'a\nб' найдет А, пренос строки и Б)<br>
+				/кот/g - Кот теракот и котлета (найдет 2 раза 'кот')<br>
+				/кот/gi - Кот теракот и котлета (найдет 3 раза 'кот'(регистро независимый))<br>
+				y - для поиска на определенной позиции lastIndex<br>
+				/\p{Sc}/g - юникодное св-во (поиск символов валют) по умолч. не поддерживается<br>
+				/\p{Sc}/gu - говорит, что исп. юникодный код (не для всех бро)<br>
+				m - многострочный поиск</p>
+
+			<p>Якоря<br>
+				^[] - символ (за квадратными скобками) начала текста (найдет слово) или строки, если есть флаг "m"<br>
+				[]$ - символ (за квадратными скобками) конца текста (найдет слово) или строки, если есть флаг "m"<br>
+				\b - граница слова между:<br>
+				1) ^ и \w<br>
+				2) \w и \W и наоборот<br>
+				3) \w и $<br>
+				\b - НЕ граница слова (ищет сочетания внутри слов)</p><br>
+		</details>
+
+		<h1>Заметки</h1> <!-- ================================= Заметки ============================= -->
+		<!-- <details>
+				<summary>VS Code</summary>
+
+				<p>Здесь пока пусто</p><br>
+			</details> -->
+
+		<!-- ================================= JS Задачи ============================= -->
+		<details>
+			<summary>JS Задачи</summary>
+
+			<p>1. Выведите на экран числа от 0 до 100.</p>
+			<p>2. Вывести четные числа от 0 до 101.</p>
+			<p>3. Вывести числа в следущей последовательности: 200 199 198 ... 0.</p>
+			<p>4. Найти сумму чисеп от 0 до 100 (включительно). (0*1+2+3+4+5).</p>
+			<p>5. Задайте два input. В первый вводится число, во второе его степень. С помощью цикла возведите число в степень. Напечатайте результат.</p>
+			<p>6. С помощью цикла напечатайте таблицу умножения на 7 от 1 до 9. Т.е.:<br>1*7=7<br>2*7=14<br>3*7=21...</p>
+			<p>7. С помощью цикла вывести произведение чисел от 1 до 50.</p>
+			<p>8. Выведите с помощью цикла коды спецсимвопов от 1000 до 2000. Напомню, что спецсимвол получается комбинацией &#чиспо; Например &#1222;</p>
+			<p>9. Получите все параграфы внутри div.main. лам страницы. Используя цикл пронумеруйте все параграфы. Номер добавьте внутри тега параграфа перед текстом.</p>
+			<p>10. Создайте два поля. В одно пользователь вводит день рождения, во второй - месяц (в виде числа). Выведите знак зодиака под каким родился пользователь. Данные о знаке зодиака храните в массиве.</p>
+			<p>11. С помощью JS найдите все span на странице и сделайте им цвет фона - желтый.</p>
+			<p>12. Выведите внизу страницы информацию о кол-ве параграфов.</p>
+			<p>13. Создайте массив состояний из единицы и 5 нулей. Те. [1, 0,0.0,0,0]. Выведите массив на страницу. Добавьте кнопку. При каждом нажатии кнопки смещайте единицу вправо на одну позицию и заново выводите массив в тот же блок что и раньше. Если единица достигла конца массива - не делайте ничего.</p>
+			<p>14. Создайте массив с произвольными числами. Выведите количество эл-ов массива меньше нуля.</p>
+			<p>15. Создайте массив с произвольными числами. Выведите эл-ты массива меньше нуля.</p>
+			<p>16. Создайте при куда пользователь может ввести копичество элементов массива.</p>
+			<p>17. Создайте input куда пользователь может ввести количество элементов массива. После нажатия кнопки создается массив заданной длинны заполненный случайными числами от 0 до 100.</p>
+			<p>18. Создайте массив заполненный числами и строками. Используя цикл создайте другой массив куда поместите только числа из первого массива.</p>
+			<p>19. Создайте массив. Выведите максимальное значение из этого массива.</p>
+
+			<p>20 Сложное! Создайте массив и заполните его значениеми. Выведите статистику - скопько раз в массиве повторяется то или инное значение. Алгоритм решения. Логика решения - у вас в первой части правильная. Теперь за статистику. Алгоритм решения:<br>
+				Дано: исходный массив arr;<br>
+				Результат: массив res = {};<br>
+				1) Запустить цикл по массиву. От нуля до длины -1<br>
+				2) Получаем arr[i] - это первый элемент массива. Нам нужно посчитать сколько раз он в массиве встречается. — сюда ставим проверку.<br>
+				3) Но поскольку мы его уже получили, то минимум один раз он есть. Те. res[a] = 1.<br>
+				4) Запускаем второй цикл - по j. От следующего эл-та (i+1), до конца массива.<br>
+				5) Проверяем - если arr[j] равно arr[i], то увеличиваем res{arr[i]} на единицу.<br>
+				В принципе все. НО, если у нас массив типа [1,3,4,1] То вторая единица (см. пункт 3) перезатрет результат когда мы до нее дойдем. Поэтому перед третим пунктом нужно вставить проверку. Если такой элемент есть - пропускаем данную переменную - continue.</p>
+
+			<p>1. Игра Угадай число. С помощью функции при загрузке страницы генерируйте спучайное число от 0 до 9. Добавьте его в переменную.<br>
+				Создайте input type=text и кнопку. На кнопку добавьте функцию, которая читает введенное пользователем число в элемент input. Проверьте введеное число: - не ввел ли пользователь пустую строку - ввел ли пользователь число. Сравните введенное и загаданное число. Если они совпали - выведите alert с поздравлением и перезагрузите страницу. Если не совпали - выведите alert с сообщением (больше или меньше введенное чиспо загаданному).</p>
+			<p>2. Создайте кнопку. После первого нажатия кнопка должна сменить текст на себе на "Не нажимать", и вывести на экран количество оставшихся попыток - 2. После 2 нажатий кнопки, она должна скрыть сама себя.</p>
+			<p>3. Создайте два поля для ввода чисел. После ввода и нажатия кнопки - выведите большее число.</p>
+			<p>4. Создайте два поля. В одно пользователь вводит день рождения, во второй - месяц (в виде числа).Выведите знак зодиака под каким родился пользователь.</p>
+			<p>5. Создайте input куда пользователь может ввести год рождения. Программа должна вывести символ года по китайскому календарю. Подумайте как можно упростить программу.</p>
+			<br>
+		</details>
+
+		<!-- ================================= JS Задачи ============================= -->
+		<details>
+			<summary>Всякое</summary>
+
+			<p>С чего начать геймдев? С того, кем ты хочешь быть, создавать игры можно на бумаге или в экселе, и это будет гейм дизайн, также среди них сильно выделяются дизайнеры уровней. Можно быть техническим художником, аниматором, 3д художником, художником игрового окружения или концептов, спец эффектов, интерфейса. Дизайнером интерфейсов и опыта взаимодействия. создавать игры - это не только программирование. Знание движков и редакторов полезно для программиста, но в первую очередь лучше владеть C++ и алгоритмами, а потом уже unity (хотя в индустрии больше жалуют unreal engine). Тем не менее, у серьёзных игроков в индустрии целиком собственный инструментарий, в котором знание тонкостей общедоступных движков окажется бесполезным.</p>
+			<p>Посмотреть про ютм метки...</p>
+			<p>Да, можно установить один обработчик на поле .game, а не 9 обработчиков на ячейки .game-item. Это вроде делегирование событий называется.Просто проверяешь на какой именно элемент был клик. И если тебя этот элемент не устраивает, просто прекращаешь работу функции через ретерн. Как вариант if(!event.target.classList.contains('game-item')) return</p>
+			<p>Требования при приеме на работу:<br>
+				• знание Верстки CSS (семантическая, адаптивная)<br>
+				• знание GRID и Flexbox<br>
+				• знание Функций JavaScript.<br>
+				• знание Объектов и массивов JavaScript.<br>
+				• знание DOM, Event.<br>
+				• знание Основных методов (Reduce, Filter, map, forEach, every/some и остальные).<br>
+				• знание Деструктуризация объекта, spread оператор, Объект Promise, запросы в сеть и функция Fetch.<br>
+				• JS фреймворк: React, Socket io<br>
+				• Веб фреймворк: Sails js, Express.<br>
+				• Веб сервер Express, Nginx<br>
+				• Webpack<br>
+				• знание Node js<br>
+				• CDN CloudFlare (желательно)</p><br>
+		</details>
+
+		<!-- ================================= SMM Курсы: заметки ============================= -->
+		<details>
+			<summary>SMM Курсы: заметки</summary>
+
+			<p>Виды постов (контента):<br>
+				- условно брендированный<br>
+				- адаптивный<br>
+				- история (сторителинг)<br>
+				- образовательный<br>
+				- видео</p>
+
+			<p>Вовлекающие посты - которые коментят<br>
+				Веральный посты - которыми делятся (репостят)</p>
+
+			<p>По интересам (виральный контент (развлекательные/позновательные) 70%, вовлек-ий (опросы) 10-15%, конвертирующий 15% (оставщийся)(имиджевые/продающие))<br>
+				Брендовая виральный (развлекательные только про бренд) 50%, вовлек-ий 20%, конвертирующий 30% - для лояльности<br>
+				Смешанная</p><br>
+		</details>
+	</main>
+
+	<footer>
+		<q>
+			::before
+			"I like Web"
+			::after
+		</q>
+		<address>eGa ^(0_0)^ 2021</address>
+	</footer>
+
+</body>
+
+</html>
+
+<!-- 
+article = статья, запись в блоге
+aside = сайдбары, боковые панели
+ -->
