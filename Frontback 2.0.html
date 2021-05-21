@@ -339,14 +339,16 @@
 				hidden - визуально скрывает<br>
 				tabindex - переход табом<br>
 				dir - меняет направление текста<br>
-				lang - особенности при разных языках</p>
+				lang - особенности при разных языках
+			</p>
 
 			<p>table<br>
 				caption - заголовок<br>
 				<br>
 				thead - шапка таблицы<br>
 				tbody - основная ин-ия<br>
-				tfoot - подвал таблицы (итоги)</p>
+				tfoot - подвал таблицы (итоги)
+			</p>
 
 			<p>header - шапка документа либо секции<br>
 				nav - основная навигация<br>
@@ -364,7 +366,8 @@
 				summary - видимая подпись к details<br>
 				<br>
 				mark - выделенный текст<br>
-				time - время / дата</p>
+				time - время / дата
+			</p>
 
 			<p><a href="link" download>Download File</a><br>
 				<a href="tel:+123-45-67">+123-45-67</a><br>
@@ -719,7 +722,8 @@
 
 			Посмотреть в HTML autofocus, required, pattern
 			<p>input.onfocus
-				input.onblur</p><br>
+				input.onblur
+			</p><br>
 		</details>
 
 		<!-- ================================= Массивы ============================= -->
@@ -748,9 +752,9 @@
 			<p>
 				let arr = [1,2,3,4,5]<br>
 				let sss = arr.reduce((total,item) => {<br>
-					console.log('total ' + total)<br>
-					console.log('item ' + item)<br>
-					return total + item<br>
+				console.log('total ' + total)<br>
+				console.log('item ' + item)<br>
+				return total + item<br>
 				},0)<br>
 				arr.reduce((total,item) => {}) // как reduce только задом-наперед<br>
 				let sum = nums.reduce((x, y) => x + y) сумма всех эл-ов массива
@@ -858,6 +862,25 @@
 				// history.go(-2) перейти на 2 страницы назад<br>
 				<br>
 				console.log(navigator.userAgent) // инф-я о браузере</p><br>
+		</details>
+
+		<!-- ================================= Canvas ============================= -->
+		<details>
+			<summary>Canvas</summary>
+
+			<p>
+				Отрисовка текста<br>
+				ctx.beginPath()<br>
+				ctx.font = "90px Verdana";<br>
+				ctx.fillStyle = "red";<br>
+				ctx.textAlign = "center";<br>
+				ctx.fillText('text', w / 2, 230);<br>
+				ctx.closePath()<br>
+				context.lineWidth = 2; Свойство lineWidth задает ширину линии текста<br>
+			</p>
+			<p>
+				ball.vx = 10 * (ball.x - (platforma.x + platforma.width / 2)) / platforma.width (логика отталкивания мяча от платформы)
+			</p><br>
 		</details>
 
 		<!-- ================================= Готовые решения ============================= -->
