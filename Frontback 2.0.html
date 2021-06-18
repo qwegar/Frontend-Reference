@@ -394,6 +394,53 @@
 
 			<summary>Основная информация</summary>
 
+			<pre>
+				<code>
+					<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+					
+					<meta name="viewport" content="width=640, user-scalable=no" /> *
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					* На самом деле, делать так не очень хорошо.
+					Если делать именно мобильную версию, небольшой ширины, вообще не нужно указывать viewport, сайт будет масштабироваться по ширине устройства.
+					В случае с адаптивной вёрсткой надо ипользовать-->
+
+<!-- PROGRESS BAR START
+	<style>
+		body { background: #1e1e1e; }
+		.wrapper { margin: 0 auto; max-width: 500px; width: 100%; }
+		.progress__line { background: #2fc54d; bottom: 0; color: #000; left: 0; top: 0; position: absolute; text-align: center; }
+		.progress__line-bg { background: #ccc; border-radius: 10px; height: 20px; overflow: hidden; position: relative; width: 100%; }
+		.box { background: orange; display: flex; }
+		.block { width: 50px; height: 50px; background: #fff; margin: 5px; }
+	</style>
+		<div class="wrapper">
+			<div class="progress">
+				<div class="progress__line-bg">
+					<div class="progress__line" id="progress__line" style="width:100%;"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			function progress() {
+				let elem = document.querySelector('#progress__line')
+				let width = 20
+				let id = setInterval(progressStatus, 100)
+				function progressStatus() {
+					if (width >= 100) {
+						clearInterval(id)
+					} else {
+						width++
+						elem.style.width = width + '%'
+						elem.innerHTML = 'Loading ' + width * 1 + '%'
+					}
+				}
+			}
+			progress()
+		</script>
+PROGRESS BAR END -->
+				</code>
+			</pre>
+
 			<p>
 				NoBreakSPace<br>
 				MonoSpace
@@ -566,7 +613,7 @@
 
 		<!-- ================================= Что то еще ============================= -->
 		<details>
-			<summary>Основная информация</summary>
+			<summary>Что то еще</summary>
 
 			<p></p><br>
 		</details>
@@ -784,6 +831,7 @@
 				<br>
 				str.match(regexp) выполняет поиск по строке с использованием регулярного выражения и возвращает массив, содержащий результаты поиска<br>
 				str.concat() // объединяет две или более строки<br>
+				<br>
 				str.split() // разбивает строку в массив<br>
 				// Получаем каждый символ: "Hello Tproger".split(""); >>> ["H", "e", "l", "l", "o", " ", "T", "p", "r", "o", "g", "e", "r"]<br>
 				// Получаем каждое слово из строки: "Hello Tproger".split(" "); >>> ["Hello", "Tproger"]<br>
@@ -881,10 +929,12 @@
 				arr.unshift(); // удаляет в начале<br>
 				arr.reverse(); // переворачивает массив задом-наперед<br>
 				let bb = arr.map((item) => item * 5); // служит для перебора массива<br>
+				arr.filter(Boolean) сравнение эл-от массива на истину<br>
+				<br>
 				let cc = arr.filter((item, index) => { return item % 2 == 0 && item != 0; }) // работает с условиями для массива<br>
 				let mrr = arr.filter(function (item) { return item > 0 })<br>
-				arr.filter(Boolean) сравнение эл-от массива на истину
-				a.split('разделитель'); // разбивает эл-ты строки на массив<br>
+				<br>
+				arr.split('разделитель'); // разбивает эл-ты строки на массив<br>
 				arr.every() // каждый эл-нт массива<br>
 				arr.some() // хотя бы один эл-нт массива<br>
 				arr.toString() // склеивает массив в строку<br>
@@ -911,13 +961,14 @@
 
 			<p>почитать про деструкторизацию</p>
 			<p>
-				let a = new Object();<br>
-				a.add(); // добавление элемента<br>
-				a.clear(); // очищает все эл-ты<br>
-				a.delete(); // удаляет эл-нт<br>
-				a.has(); // проверяет наличие эл-та<br>
+				let obj = new Object();<br>
+				obj.add(); // добавление элемента<br>
+				obj.clear(); // очищает все эл-ты<br>
+				obj.delete(); // удаляет эл-нт<br>
+				obj.has(); // проверяет наличие эл-та<br>
 				<br>
-				a.size // длина (кол-во эл-ов)<br>
+				obj.size // длина (кол-во эл-ов)<br>
+				obj.hasOwnProperty('св-во') проверяет ести свойство в данном объекте<br>
 				for (let i of a) { console.log(i); } // перебор эл-ов<br>
 				<br>
 				Получение массива с уникальными значениями:<br>
@@ -970,6 +1021,14 @@ console.log(allCash)
 			<summary>Функции</summary>
 
 			<p>
+				Function declaration ➟ function name() {}
+				Function expression ➟ const name = function() {}
+				Arrow function ➟ const mult = (a, b) => {return a * b}
+				Bind function ➟ const log = console.log.bind()
+				Function constructor ➟ const div = new Function('a', 'b', 'return a / b')
+			</p>
+
+			<p>
 			<pre>
 // 2.40 - новый синтаксис функций
 
@@ -1005,17 +1064,18 @@ console.log(temp('Velikiy'))
 			<summary>Navigator</summary>
 
 			<p>
-				console.log(screen.width + ' и ' + screen.height) // разрешение экрана пользователя<br>
-				console.log(screen.availWidth + ' и ' + screen.availHeight) // макс область на которую можно открыть браузер<br>
-				console.log(screen.colorDepth) // глубина цвета монитора (кол-во бит на пиксель)<br>
+				console.log(screen.width + ' и ' + screen.height) ➟ разрешение экрана пользователя<br>
+				console.log(screen.availWidth + ' и ' + screen.availHeight) ➟ макс область на которую можно открыть браузер<br>
+				console.log(screen.colorDepth) ➟ глубина цвета монитора (кол-во бит на пиксель)<br>
 				<br>
-				console.log(navigator) // инф-я о браузере<br>
-				console.log(history) // история (методы и forward() помогают листать страницы)<br>
-				// history.back() предыдущая страница в истории<br>
-				// history.forward() следующая страница в истории<br>
-				// history.go(-2) перейти на 2 страницы назад<br>
+				console.log(navigator) ➟ инф-я о браузере<br>
+				console.log(history) ➟ история (методы и forward() помогают листать страницы)<br>
 				<br>
-				console.log(navigator.userAgent) // инф-я о браузере
+				history.back() ➟ предыдущая страница в истории<br>
+				history.forward() ➟ следующая страница в истории<br>
+				history.go(-2) ➟ перейти на 2 страницы назад<br>
+				<br>
+				console.log(navigator.userAgent) ➟ инф-я о браузере
 			</p>
 			<br>
 		</details>
@@ -1097,15 +1157,25 @@ use: declOfNum(count, ['найдена', 'найдено', 'найдены']);
 			<br>
 		</details>
 
-		<!-- ================================= React.JS ============================= -->
+		<!-- ================================= NPM Компоненты ============================= -->
 		<details>
-			<summary>React.JS</summary>
+			<summary>NPM Компоненты</summary>
 
 			<p>
+				React.JS<br>
 				npm i create-react-app ➟ установка react<br>
 				npx create-react-app app-name ➟ создание папки с приложением<br>
 				cd myapp ➟ переход в папку с приложением<br>
 				npm start ➟ запуск сервера<br>
+			</p>
+
+			<p>
+				Сервер для подключения моб. устройства<br>
+				npx serve<br>
+				если выдает ошибку, то<br>
+				npm uninstall -g serve<br>
+				npm i -S serve<br>
+				yarn global add serve (помогло без этой строки)<br>
 			</p>
 			<br>
 		</details>
@@ -1392,7 +1462,7 @@ use: declOfNum(count, ['найдена', 'найдено', 'найдены']);
 				<hr>
 			</p>
 			<p>
-				1. Игра Угадай число. С помощью функции при загрузке страницы генерируйте спучайное число от 0 до 9. Добавьте его в переменную.<br>
+				1. Игра Угадай число. С помощью функции при загрузке страницы генерируйте случайное число от 0 до 9. Добавьте его в переменную.<br>
 				Создайте input type=text и кнопку. На кнопку добавьте функцию, которая читает введенное пользователем число в элемент input. Проверьте введеное число: - не ввел ли пользователь пустую строку - ввел ли пользователь число. Сравните введенное и загаданное число. Если они совпали - выведите alert с поздравлением и перезагрузите страницу. Если не совпали - выведите alert с сообщением (больше или меньше введенное чиспо загаданному).<br>
 				2. Создайте кнопку. После первого нажатия кнопка должна сменить текст на себе на "Не нажимать", и вывести на экран количество оставшихся попыток - 2. После 2 нажатий кнопки, она должна скрыть сама себя.<br>
 				3. Создайте два поля для ввода чисел. После ввода и нажатия кнопки - выведите большее число.<br>
@@ -1402,7 +1472,7 @@ use: declOfNum(count, ['найдена', 'найдено', 'найдены']);
 			<br>
 		</details>
 
-		<!-- ================================= JS Задачи ============================= -->
+		<!-- ================================= Всякое ============================= -->
 		<details>
 			<summary>Всякое</summary>
 
