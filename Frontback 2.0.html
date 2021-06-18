@@ -54,6 +54,10 @@
 			color: rgb(110, 110, 110);
 		}
 
+		main a {
+			color: rgb(110, 110, 110);
+		}
+
 		footer {
 			max-width: 100%;
 			text-align: center;
@@ -251,14 +255,15 @@
 			<p>Плагины:<br>
 				• Плагин для выделения текста на ссылках: Select like a Boss<br>
 				• Adblock Plus - бесплатный блокировщик рекламы<br>
-				• SaveFrom.net помощник<br>
+				• SaveFrom.net помощник - позволяет скачивать видео и аудео файлы с сайтов<br>
 				• Select like a Boss<br>
-				• Speed Dial for Gmail<br>
+				• Speed Dial for Gmail - удоббный и простой почтовый клиент для gmail<br>
+				• <a href="https://addons.opera.com/ru/extensions/details/scripter-script-includer/">Scripter</a> - позволяет подключать пользовательские скрипты<br>
 				<br>
-				Dark Mode https://addons.opera.com/ru/extensions/details/dark-mode/<br>
-				Install Chrome Extentions https://addons.opera.com/ru/extensions/details/install-chrome-extensions/<br>
-				Gmail Notifier https://addons.opera.com/ru/extensions/details/gmail-notifier/<br>
-				Adguard https://addons.opera.com/ru/extensions/details/adguard/ блокировка рекламы</p>
+				<a href="https://addons.opera.com/ru/extensions/details/dark-mode/">Dark Mode</a> - добавляет возможность включить пользовательский "ночной режим" для любого сайта<br>
+				<a href="https://addons.opera.com/ru/extensions/details/install-chrome-extensions/">Install Chrome Extentions</a> позваляет устанавливать расширения chrome в opera<br>
+				<a href="https://addons.opera.com/ru/extensions/details/gmail-notifier/">Gmail Notifier</a><br>
+				<a href="https://addons.opera.com/ru/extensions/details/adguard/">Adguard</a> блокировка рекламы</p>
 		</details>
 
 		<!-- ================================= Notepad++ ============================= -->
@@ -511,6 +516,17 @@
 
 			<p>@media - проверяя ширину окна браузера перед тем, как применить стили<br>
 				@supports - позволяющий проверить браузерную поддержку какого-то свойства или комбинации свойства и значения перед тем, как применять определённый блок стилей</p><br>
+		</details>
+
+		<!-- ================================= Куча ============================= -->
+		<details>
+			<summary>Куча</summary>
+
+			<p>
+				<b>CSS переменные:</b><br>
+				:root{ --main-color: red; }<br>
+				#elem{ color: var(--main-color, default-value); }
+			</p><br>
 		</details>
 
 		<!-- ================================= БЭМ ============================= -->
@@ -855,7 +871,8 @@
 		<details>
 			<summary>Navigator</summary>
 
-			<p>console.log(screen.width + ' и ' + screen.height) // разрешение экрана пользователя<br>
+			<p>
+				console.log(screen.width + ' и ' + screen.height) // разрешение экрана пользователя<br>
 				console.log(screen.availWidth + ' и ' + screen.availHeight) // макс область на которую можно открыть браузер<br>
 				console.log(screen.colorDepth) // глубина цвета монитора (кол-во бит на пиксель)<br>
 				<br>
@@ -865,7 +882,8 @@
 				// history.forward() следующая страница в истории<br>
 				// history.go(-2) перейти на 2 страницы назад<br>
 				<br>
-				console.log(navigator.userAgent) // инф-я о браузере</p><br>
+				console.log(navigator.userAgent) // инф-я о браузере
+			</p><br>
 		</details>
 
 		<!-- ================================= Canvas ============================= -->
@@ -894,12 +912,12 @@
 			<p>
 			<pre class="javascript" style="font-family:monospace;">Склонение числительных в javascript
 					<span style="color: #000066; font-weight: bold;">function</span> declOfNum<span style="color: #009900;">&#40;</span>number<span style="color: #339933;">,</span> titles<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
-							cases <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>  
-							<span style="color: #000066; font-weight: bold;">return</span> titles<span style="color: #009900;">&#91;</span> <span style="color: #009900;">&#40;</span>number<span style="color: #339933;">%</span>100<span style="color: #339933;">&gt;</span><span style="color: #CC0000;">4</span> <span style="color: #339933;">&amp;&amp;</span> number<span style="color: #339933;">%</span>100<span style="color: #339933;">&lt;</span><span style="color: #CC0000;">20</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span> <span style="color: #CC0000;">2</span> <span style="color: #339933;">:</span> cases<span style="color: #009900;">&#91;</span><span style="color: #009900;">&#40;</span>number<span style="color: #339933;">%</span>10<span style="color: #339933;">&lt;</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span>number<span style="color: #339933;">%</span>10<span style="color: #339933;">:</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#93;</span> <span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>  
+						cases <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>  
+						<span style="color: #000066; font-weight: bold;">return</span> titles<span style="color: #009900;">&#91;</span> <span style="color: #009900;">&#40;</span>number<span style="color: #339933;">%</span>100<span style="color: #339933;">&gt;</span><span style="color: #CC0000;">4</span> <span style="color: #339933;">&amp;&amp;</span> number<span style="color: #339933;">%</span>100<span style="color: #339933;">&lt;</span><span style="color: #CC0000;">20</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span> <span style="color: #CC0000;">2</span> <span style="color: #339933;">:</span> cases<span style="color: #009900;">&#91;</span><span style="color: #009900;">&#40;</span>number<span style="color: #339933;">%</span>10<span style="color: #339933;">&lt;</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">?</span>number<span style="color: #339933;">%</span>10<span style="color: #339933;">:</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#93;</span> <span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>  
 					<span style="color: #009900;">&#125;</span>
 					use<span style="color: #339933;">:</span>
 					declOfNum<span style="color: #009900;">&#40;</span>count<span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #3366CC;">'найдена'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'найдено'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'найдены'</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
-			</pre>
+				</pre>
 			</p><br>
 		</details>
 
@@ -909,10 +927,16 @@
 		<details>
 			<summary>Командная строка</summary>
 
-			<p>dir список папок<br>
+			<p>
+				c: // (d:, e:) выбор диска<br>
+				dir // просмотр папок в выбранной директории<br>
 				. текущая папка<br>
 				.. уровень выше<br>
-				cd.. выход выше</p><br>
+				cd 'имя папки' // (chench directory) вход в папку (tab: автозаполнение)<br>
+				cd.. выход выше<br>
+				tree строит дерево всех каталогов
+				cls // очистка консоли<br>
+			</p><br>
 		</details>
 
 		<!-- ================================= Node.JS ============================= -->
@@ -921,11 +945,6 @@
 
 			<p>node запуск ноды<br>
 				ctrl+c x2 выход из ноды<br>
-				c: // (d:, e:) выбор диска<br>
-				dir // просмотр папок в выбранной директории<br>
-				cd 'имя папки' // (chench directory) вход в папку (tab: автозаполнение)<br>
-				cd .. // выход на каталог вверх<br>
-				cls // очистка консоли<br>
 				npm install (i) // (npm i -g create-react-app) установка компонентов<br>
 				npx // (node package exequte) запуск (выполнить) компонента<br>
 				<br>
