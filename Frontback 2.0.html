@@ -299,12 +299,13 @@
 				• SaveFrom.net помощник - позволяет скачивать видео и аудео файлы с сайтов<br>
 				• Select like a Boss<br>
 				• Speed Dial for Gmail - удоббный и простой почтовый клиент для gmail<br>
-				• <a href="https://addons.opera.com/ru/extensions/details/scripter-script-includer/">Scripter</a> - позволяет подключать пользовательские скрипты<br>
+				• React Developer Tools<br>
 				<br>
+				<a href="https://addons.opera.com/ru/extensions/details/scripter-script-includer/">Scripter</a> - позволяет подключать пользовательские скрипты<br>
 				<a href="https://addons.opera.com/ru/extensions/details/dark-mode/">Dark Mode</a> - добавляет возможность включить пользовательский "ночной режим" для любого сайта<br>
 				<a href="https://addons.opera.com/ru/extensions/details/install-chrome-extensions/">Install Chrome Extentions</a> позваляет устанавливать расширения chrome в opera<br>
 				<a href="https://addons.opera.com/ru/extensions/details/gmail-notifier/">Gmail Notifier</a><br>
-				<a href="https://addons.opera.com/ru/extensions/details/adguard/">Adguard</a> блокировка рекламы
+				<a href="https://addons.opera.com/ru/extensions/details/adguard/">Adguard</a> блокировка рекламы<br>
 			</p>
 		</details>
 
@@ -1016,16 +1017,44 @@ console.log(allCash)
 			</p>
 		</details>
 
+		<!-- ================================= Date ============================= -->
+		<details>
+			<summary>Объект Date</summary>
+
+			<p>
+				const date1 = new Date() // Tue Sep 07 2021 19:23:14 GMT+0300 (Москва, стандартное время)<br>
+				const date2 = new Date(1111032364000)<br>
+				const date3 = new Date(2021, 9, 6, 11, 15)<br>
+				console.log(date1.toUTCString())<br>
+				console.log(date1.toDateString())<br>
+				console.log(date1.toISOString())<br>
+				console.log(new Date().getFullYear())<br>
+				console.log(new Date().getMonth()) // 0...11<br>
+				console.log(new Date().getDate())<br>
+				console.log(new Date().getDay())<br>
+				console.log(`${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`)<br>
+				console.log(new Date().getTime()) // Unix Time<br>
+				console.log(Date.now()) // Unix Time<br>
+			</p>
+
+			<p>
+				const timeNow = new Date(1631037255308)<br>
+				function getUserTime(time) { let Y = time.getFullYear(); console.log(Y) }<br>
+				getUserTime(timeNow)<br>
+			</p>
+
+		</details>
+
 		<!-- ================================= Функции ============================= -->
 		<details>
 			<summary>Функции</summary>
 
 			<p>
-				Function declaration ➟ function name() {}
-				Function expression ➟ const name = function() {}
-				Arrow function ➟ const mult = (a, b) => {return a * b}
-				Bind function ➟ const log = console.log.bind()
-				Function constructor ➟ const div = new Function('a', 'b', 'return a / b')
+				Function declaration ➟ function name() {}<br>
+				Function expression ➟ const name = function() {}<br>
+				Arrow function ➟ const mult = (a, b) => {return a * b}<br>
+				Bind function ➟ const log = console.log.bind()<br>
+				Function constructor ➟ const div = new Function('a', 'b', 'return a / b')<br>
 			</p>
 
 			<p>
@@ -1114,6 +1143,31 @@ function declOfNum(number, titles) {
 }
 use: declOfNum(count, ['найдена', 'найдено', 'найдены']);
 			</pre>
+			</p>
+			<br>
+		</details>
+
+		<h1>React JS</h1> <!-- ================================= React JS ============================= -->
+
+		<!-- ================================= React JS ============================= -->
+		<details>
+			<summary>React JS</summary>
+
+			<p>
+				npm i (-g) create-react-app<br>
+				npx create-react-app my-app<br>
+				cd my-app and npm start<br>
+				<br>
+				npm test = тестирование<br>
+				npm run build = сборка проекта<br>
+			</p>
+
+			<p>
+				<a href="http://localhost:3000">http://localhost:3000</a> стандартная ссылка на проект<br>
+				<br>
+				Как изменить порт по умолчанию ↓<br>
+				"start": "react-scripts start"<br>
+				"start": "set PORT=3005 && react-scripts start"<br>
 			</p>
 			<br>
 		</details>
